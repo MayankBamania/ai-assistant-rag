@@ -1,0 +1,35 @@
+﻿# ── Environment & secrets ──────────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+
+# ── Node / Backend ─────────────────────────────────────────────────────────
+node_modules/
+backend/node_modules/
+backend/dist/
+backend/coverage/
+npm-debug.log*
+yarn-error.log*
+*.tsbuildinfo
+
+# ── Angular / Frontend ─────────────────────────────────────────────────────
+# (frontend/.gitignore handles the rest; these catch any root-level leakage)
+frontend/node_modules/
+frontend/dist/
+frontend/.angular/cache/
+
+# ── Build outputs ──────────────────────────────────────────────────────────
+dist/
+tmp/
+out-tsc/
+
+# ── OS & editor artifacts ──────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+*.sublime-workspace
+.idea/
+.history/
+
+# ── Test & coverage ────────────────────────────────────────────────────────
+coverage/
+.nyc_output/

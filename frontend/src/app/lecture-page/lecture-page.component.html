@@ -1,0 +1,31 @@
+<!-- Loading state -->
+<div *ngIf="loading" class="status-screen" role="status" aria-live="polite">
+  <div class="status-spinner" aria-hidden="true"></div>
+  <span>Loading lecture…</span>
+</div>
+
+<!-- Error state -->
+<div *ngIf="!loading && error" class="status-screen status-error" role="alert">
+  <span>{{ error }}</span>
+</div>
+
+<!-- Split-screen layout -->
+<div *ngIf="!loading && !error" class="lecture-layout">
+  <!-- Left panel: video player (60%) -->
+  <div class="panel panel-video">
+    <app-video-player
+      [videoId]="videoId"
+      (playerReady)="onPlayerReady()"
+    />
+  </div>
+
+  <!-- Right panel: chat sidebar (40%) -->
+  <div class="panel panel-chat">
+    <app-chat-sidebar
+      [courseId]="courseId"
+      [lectureId]="lectureId"
+      [isPlayerReady]="isPlayerReady"
+      (seekRequest)="onSeekRequest($event)"
+    />
+  </div>
+</div>

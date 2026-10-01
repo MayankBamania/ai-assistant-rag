@@ -1,0 +1,667 @@
+{
+  "pbtResults": {},
+  "executionHistory": {
+    "1.1 Enable pgvector extension and create the `courses` and `lectures` tables": [
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788331219038
+      },
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788331239095
+      },
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788331302612
+      }
+    ],
+    "1.2 Create `chunks` and `semantic_cache` tables with constraints": [
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788331220068
+      },
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788331307790
+      },
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788331393653
+      }
+    ],
+    "1.3 Create FTS trigger and all required indexes": [
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788331220566
+      },
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788331398160
+      },
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788331504215
+      }
+    ],
+    "2.1 Initialize Node.js + TypeScript project with required dependencies": [
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788331220699
+      },
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788331513611
+      },
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788331968881
+      }
+    ],
+    "2.2 Create the layered folder structure": [
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788331220875
+      },
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788331988474
+      },
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788332103926
+      }
+    ],
+    "2.3 Configure environment variables and Supabase client": [
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788331221173
+      },
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788332109081
+      },
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788332321067
+      }
+    ],
+    "2.4 Define shared TypeScript interfaces": [
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788331221560
+      },
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788332113815
+      },
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788332325882
+      }
+    ],
+    "3.1 Implement the Embedding Service with retry logic": [
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788331221745
+      },
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788332330433
+      },
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788332407525
+      }
+    ],
+    "4.1 Implement the Chunker": [
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788331221914
+      },
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788332413250
+      },
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788332543093
+      }
+    ],
+    "5.1 Implement `courseRepository.ts`": [
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788331222121
+      },
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788332548404
+      },
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788332640408
+      }
+    ],
+    "5.2 Implement `lectureRepository.ts`": [
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788331222290
+      },
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788332645102
+      },
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788332885561
+      }
+    ],
+    "5.3 Implement `chunkRepository.ts`": [
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788331222444
+      },
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788332650181
+      },
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788332890408
+      }
+    ],
+    "5.4 Implement `cacheRepository.ts`": [
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788331222640
+      },
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788332896455
+      },
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788333246114
+      }
+    ],
+    "6.1 Implement YouTube URL validation and transcript fetching in `ingestionService.ts`": [
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788331222826
+      },
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788333251011
+      },
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788333360417
+      }
+    ],
+    "6.2 Implement ingestion orchestration in `ingestionService.ts`": [
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788331223039
+      },
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788333364890
+      },
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788333507283
+      }
+    ],
+    "6.3 Create `ingestionController.ts` and `POST /api/ingest` route": [
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788331223192
+      },
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788333512919
+      },
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788333760803
+      }
+    ],
+    "7.1 Implement semantic cache lookup in `ragQueryService.ts`": [
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788331223625
+      },
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788333517919
+      },
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788333767078
+      }
+    ],
+    "7.2 Implement hybrid search and RRF in `ragQueryService.ts`": [
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788331224107
+      },
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788333772036
+      },
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788334483856
+      }
+    ],
+    "7.4 Implement LLM streaming, citations, and cache save in `ragQueryService.ts`": [
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788331224259
+      },
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788334488646
+      },
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788334761117
+      }
+    ],
+    "7.5 Create `queryController.ts` and `GET /api/query` route": [
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788331224409
+      },
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788334767743
+      },
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788341339660
+      }
+    ],
+    "8.1 Implement `courseController.ts` and course routes": [
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788331224541
+      },
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788341347540
+      },
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788341613389
+      }
+    ],
+    "8.2 Implement `lectureController.ts` and lecture routes": [
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788331224666
+      },
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788341619571
+      },
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788341742895
+      }
+    ],
+    "8.3 Wire all routes into Express app entry point": [
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788331224825
+      },
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788341748971
+      },
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788341880150
+      }
+    ],
+    "9. Backend checkpoint": [
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788331224996
+      },
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788341885944
+      },
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788342095271
+      }
+    ],
+    "10.1 Initialize Angular project with routing and SharedModule": [
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788331225166
+      },
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788341892385
+      },
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788343039161
+      }
+    ],
+    "11.1 Create TrainerModule with lazy loading and TrainerDashboardComponent": [
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788331225363
+      },
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788343046408
+      },
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788343390670
+      }
+    ],
+    "11.2 Create CourseDetailComponent and LectureRowComponent with status polling": [
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788331225572
+      },
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788343397522
+      },
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788343608334
+      }
+    ],
+    "12.1 Create LecturePageComponent with split-screen layout": [
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788331226475
+      },
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788343616704
+      },
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788343945642
+      }
+    ],
+    "12.2 Create VideoPlayerComponent with YouTube IFrame API integration": [
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788331226818
+      },
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788343952662
+      },
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788344342559
+      }
+    ],
+    "12.3 Create ChatSidebarComponent with SSE streaming and input validation": [
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788331227388
+      },
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788343959234
+      },
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788344349011
+      }
+    ],
+    "12.4 Create CitationListComponent and wire citations to video seek": [
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788331227614
+      },
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788344354555
+      },
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788344711788
+      }
+    ],
+    "13.1 Wire Angular environment files to backend API base URL": [
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788331228206
+      },
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788344718304
+      },
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788344907956
+      }
+    ],
+    "13.2 Wire frontend SSE client to backend query endpoint": [
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788331228504
+      },
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788344913706
+      },
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788345831427
+      }
+    ],
+    "13.3 Final checkpoint — ensure all tests pass": [
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788331229015
+      },
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788345845512
+      },
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788345974562
+      }
+    ],
+    "1. Supabase schema and indexes": [
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788331504926
+      }
+    ],
+    "2. Backend scaffolding — layered folder structure": [
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788332326020
+      }
+    ],
+    "3. Embedding Service": [
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788332407820
+      }
+    ],
+    "4. Chunker": [
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788332543264
+      }
+    ],
+    "5. Repositories": [
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788333246445
+      }
+    ],
+    "6. Ingestion Service": [
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788333760931
+      }
+    ],
+    "7. RAG Query Service": [
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788341340230
+      }
+    ],
+    "8. Trainer API": [
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788341880519
+      }
+    ],
+    "10. Angular project scaffolding": [
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788343039627
+      }
+    ],
+    "11. Angular Trainer UI": [
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788343608959
+      }
+    ],
+    "12. Angular Student UI": [
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788344712464
+      }
+    ],
+    "13. End-to-end integration and wiring": [
+      {
+        "executionId": "f2a254bb-85be-42fb-9ae5-dd1a575240f1",
+        "chatSessionId": "sess_e5fd2aad-bbdb-41d0-ac9d-1633966c6a95",
+        "timestamp": 1788345975229
+      }
+    ]
+  }
+}
